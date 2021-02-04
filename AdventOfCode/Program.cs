@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AdventOfCode
 {
@@ -6,23 +7,21 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            Question1.Part1 q1part1 = new Question1.Part1();
-            q1part1.Solve();
+            List<IQuestion> questions = new List<IQuestion>();
+            
+            questions.Add(new Question1.Part1());
+            questions.Add(new Question1.Part2());
+            questions.Add(new Question2.Part1());
+            questions.Add(new Question2.Part2());
+            questions.Add(new Question3.Part1());
+            questions.Add(new Question3.Part2());
+            questions.Add(new Question4.Part1());
+            questions.Add(new Question4.Part2());
 
-            Question1.Part2 q1part2 = new Question1.Part2();
-            q1part2.Solve();
-
-            Question2.Part1 q2part1 = new Question2.Part1();
-            q2part1.Solve();
-
-            Question2.Part2 q2part2 = new Question2.Part2();
-            q2part2.Solve();
-
-            Question3.Part1 q3part1 = new Question3.Part1();
-            q3part1.Solve();
-
-            Question3.Part2 q3part2 = new Question3.Part2();
-            q3part2.Solve();
+            foreach (var item in questions)
+            {
+                item.Solve();
+            }
         }
     }
 }
