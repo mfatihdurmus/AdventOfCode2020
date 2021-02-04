@@ -17,6 +17,8 @@ namespace AdventOfCode
             questions.Add(new Question3.Part2());
             questions.Add(new Question4.Part1());
             questions.Add(new Question4.Part2());
+            questions.Add(new Question7.Part1());
+            questions.Add(new Question7.Part2());
 
             foreach (var item in questions)
             {
